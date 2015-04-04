@@ -14,7 +14,7 @@ import android.os.Bundle;
 
 public class MainActivity extends Activity implements OnMapReadyCallback {
 
-    @Override
+    
     
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class MainActivity extends Activity implements OnMapReadyCallback {
         
     }
 
-    @Override
+    
     public void onMapReady(GoogleMap map) {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
                 new LatLng(49.20371, -122.91459), 13));
@@ -37,6 +37,7 @@ public class MainActivity extends Activity implements OnMapReadyCallback {
         // Other supported types include: MAP_TYPE_NORMAL,
         // MAP_TYPE_TERRAIN, MAP_TYPE_HYBRID and MAP_TYPE_NONE
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        map.setMyLocationEnabled(true);
         
     }
 
